@@ -37,11 +37,7 @@ const ItemPreview = (props) => {
     >
       <img
         alt="item"
-<<<<<<< HEAD
-        src={process.env.PUBLIC_URL + 'placeholder.png'}//src={item.image}
-=======
-        src={item.image}
->>>>>>> 3476a81fa00c91604802d60ee9f5377b0fa71151
+        src={process.env.PUBLIC_URL + 'placeholder.png'}//src={item.image
         className="card-img-top item-img"
         style={{ borderRadius: "20px" }}
       />
@@ -53,11 +49,7 @@ const ItemPreview = (props) => {
         <div className="d-flex flex-row align-items-center pt-2 item-footer">
           <Link to={`/@${item.seller.username}`} className="flex-grow-1">
             <img
-<<<<<<< HEAD
               src={process.env.PUBLIC_URL + 'placeholder.png'} //src={item.seller.image}
-=======
-              src={item.seller.image}
->>>>>>> 3476a81fa00c91604802d60ee9f5377b0fa71151
               alt={item.seller.username}
               className="user-pic rounded-circle pr-1"
             />
