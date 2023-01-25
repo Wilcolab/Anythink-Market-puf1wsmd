@@ -28,6 +28,9 @@ const ItemPreview = (props) => {
       props.favorite(item.slug);
     }
   };
+  // const imageValue = (ev) => {
+  //   if (item.image = "")
+  // } else {}
 
   return (
     <div
@@ -37,7 +40,9 @@ const ItemPreview = (props) => {
     >
       <img
         alt="item"
-        src={process.env.PUBLIC_URL + 'placeholder.png'}//src={item.image
+        //src={item.image}
+
+        src={process.env.PUBLIC_URL + 'placeholder.png'}
         className="card-img-top item-img"
         style={{ borderRadius: "20px" }}
       />
