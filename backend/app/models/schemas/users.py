@@ -5,7 +5,7 @@ from pydantic import BaseModel, EmailStr, HttpUrl
 from app.models.domain.users import User
 from app.models.schemas.rwschema import RWSchema
 
-
+default_image = '/placeholder.png'
 class UserInLogin(RWSchema):
     email: EmailStr
     password: str
