@@ -7,7 +7,7 @@ from app.models.schemas.rwschema import RWSchema
 
 DEFAULT_ITEMS_LIMIT = 20
 DEFAULT_ITEMS_OFFSET = 0
-default_image = '/placeholder.png'
+
 class ItemForResponse(RWSchema, Item):
     tags: List[str] = Field(..., alias="tagList")
 
