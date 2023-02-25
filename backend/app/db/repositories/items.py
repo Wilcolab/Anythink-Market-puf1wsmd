@@ -50,7 +50,7 @@ class ItemsRepository(BaseRepository):  # noqa: WPS214
                 description=description,
                 body=body,
                 seller_username=seller.username,
-                image=image or default_image
+                image=default_image
             )
 
             if tags:
