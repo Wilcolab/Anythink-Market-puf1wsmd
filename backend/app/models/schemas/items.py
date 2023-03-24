@@ -20,7 +20,7 @@ class ItemInCreate(RWSchema):
     title: str
     description: str
     body: Optional[str] = None
-    image: Optional[str] = None
+    image: Optional[str] = "/placeholder.png"
     tags: List[str] = Field([], alias="tagList")
 
 
