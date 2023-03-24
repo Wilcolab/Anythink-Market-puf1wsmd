@@ -23,7 +23,7 @@ SELLER_USERNAME_ALIAS = "seller_username"
 SLUG_ALIAS = "slug"
 
 CAMEL_OR_SNAKE_CASE_TO_WORDS = r"^[a-z\d_\-]+|[A-Z\d_\-][^A-Z\d_\-]*"
-
+default_image = '/placeholder.png'
 
 class ItemsRepository(BaseRepository):  # noqa: WPS214
     def __init__(self, conn: Connection) -> None:
@@ -39,7 +39,7 @@ class ItemsRepository(BaseRepository):  # noqa: WPS214
         description: str,
         seller: User,
         body: Optional[str] = None,
-        image: Optional[str] = None,
+        image: Optional[str] = default_image,
         tags: Optional[Sequence[str]] = None,
     ) -> Item:
         async with self.connection.transaction():
@@ -50,7 +50,7 @@ class ItemsRepository(BaseRepository):  # noqa: WPS214
                 description=description,
                 body=body,
                 seller_username=seller.username,
-                image=image
+                image=default_image
             )
 
             if tags:
